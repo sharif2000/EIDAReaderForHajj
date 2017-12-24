@@ -1,0 +1,87 @@
+ol, ul {
+    list-style: none outside none;
+}
+.active {
+    font-weight: bold;
+}
+
+.sidemenu li {
+    margin: 2px 0;
+}
+.sidemenu ul {
+    margin: 0;
+}
+.sidemenu li a {
+    display: block;
+    margin: 0;
+    padding: 3px 5px 3px 20px;
+}
+.sidemenu li a:link, .sidemenu li a:visited {
+    background-color: #9D9D9D;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sidemenu li a:hover, .sidemenu li a:focus, .sidemenu li a:active {
+    background-color: #E3E4DE;
+    color: #5D5D5D;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sidemenu li .active:link, .sidemenu li .active:visited {
+    background-color: #E3E4DE;
+    color: #EE3F1C;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sidemenu li .active:hover, .sidemenu li .active:focus, .sidemenu li .active:active {
+    background-color: #E3E4DE;
+    color: #EE3F1C;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sidemenu li .active-parent:link, .sidemenu li .active-parent:visited {
+    background-color: #E3E4DE;
+    color: #5D5D5D;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sidemenu li .active-parent:hover, .sidemenu li .active-parent:focus, .sidemenu li .active-parent:active {
+    background-color: #E3E4DE;
+    color: #333333;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sidemenu {
+    margin: 0;
+    padding: 5px 0 0;
+}
+.sidemenu li ul li a {
+    display: block;
+    margin: 0;
+    padding: 3px 5px 3px 35px;
+}
+.sidemenu li ul li a:link, .sidemenu li ul li a:visited {
+    background: url("../images/icos-submenu.gif") no-repeat scroll 20px -87px #FFFFFF;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+}
+.sidemenu li ul li a:hover, .sidemenu li ul li a:focus, .sidemenu li ul li a:active {
+    background: url("../images/icos-submenu.gif") no-repeat scroll 20px 8px #FFFFFF;
+    color: #EE3F1C;
+    font-weight: normal;
+    text-decoration: none;
+}
+.sidemenu li ul li .active:link, .sidemenu li ul li .active:visited {
+    background: url("../images/icos-submenu.gif") no-repeat scroll 20px 8px #FFFFFF;
+    color: #EE3F1C;
+    font-weight: normal;
+    text-decoration: none;
+}
+.sidemenu li ul li .active:hover, .sidemenu li ul li .active:focus, .sidemenu li ul li .active:active {
+    background: url("../images/icos-submenu.gif") no-repeat scroll 20px 8px #FFFFFF;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+}

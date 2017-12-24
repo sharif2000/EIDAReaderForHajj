@@ -44,16 +44,27 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Layouts\EIDAReaderForHajj\NewHajjFormWithEIDAReader.aspx.cs">
+      <DependentUpon>NewHajjFormWithEIDAReader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\EIDAReaderForHajj\NewHajjFormWithEIDAReader.aspx.designer.cs">
+      <DependentUpon>NewHajjFormWithEIDAReader.aspx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{89efcfeb-840e-4cab-b782-4ab65c4b3363}</SharePointProjectItemId>
+    </None>
     <None Include="Package\Package.package">
       <PackageId>{26d80de3-6373-4991-bf53-e09864284e62}</PackageId>
     </None>
@@ -63,6 +74,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Layouts\EIDAReaderForHajj\NewHajjFormWithEIDAReader.aspx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

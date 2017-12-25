@@ -13,92 +13,39 @@
     <script type="text/javascript" language="javascript" src="js/errors.js"></script>
     <script type="text/javascript" language="javascript" src="js/zfcomponent.js"></script>
     <script type="text/javascript" language="javascript" src="js/jquery-ui-1.9.0.js"></script>
-    <style type="text/css">
-        .auto-style1 {
-            font-size: xx-small;
-        }
-        .auto-style2 {
-            color: #990000;
-        }
-        .auto-style4 {
-            border-style: solid;
-            border-width: 1px;
-            padding: 1px 4px;
-            color: #990000;
-        }
-        .auto-style6 {
-        }
-        .auto-style7 {
-        }
-        .auto-style8 {
-        }
-        .auto-style9 {
-        }
-        .auto-style10 {
-        }
-        .auto-style11 {
-            text-align: right;
-            font-size: x-large;
-            float: left;
-        }
-        .image {
-   content:url(http://zf-sp/Style%20Library/Images/logo.png);
-}
-        .auto-style12 {
-            color: #FFFFFF;
-            font-size: large;
-        }
-        .auto-style13 {
-            width: 64px;
-        }
-        .auto-style14 {
-            width: 135px;
-        }
-        .auto-style15 {
-            width: 133px;
-        }
-        .auto-style16 {
-            width: 176px;
-        }
-        .auto-style17 {
-            width: 92px;
-        }
-        .auto-style18 {
-            width: 176px;
-            height: 26px;
-        }
-        .auto-style19 {
-            width: 135px;
-            height: 26px;
-        }
-        .auto-style20 {
-            width: 92px;
-            height: 26px;
-        }
-        .auto-style21 {
-            width: 133px;
-            height: 26px;
-        }
-        table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-
-    </style>
+    <script type="text/javascript" language="javascript" src="js/Script1.js"></script>
+    <link rel="stylesheet" href="css/style2.css">
 </asp:Content>
 
 <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">
+
+    <div id="left_column">
+        <input type="button" class="submitButton" value="Read Public Data" onclick="doReadPublicData();" />
+        <asp:Button ID="btnVerifyAndParse" runat="server" Text="Verify and Parse" CssClass="submitButton" OnClick="btnVerifyPubData_Click" />
+        <asp:Button ID="Button3" PostBackUrl="http://zf-sp/orgchart/ProgramsDepartment/hajj/Lists/List21/AllItems.aspx" runat="server" Text="Next" Width="130px" />
+    </div>
+
+
+    <div id="msg" style="color: red; font-size: 15px;">
+        <p>
+        </p>
+    </div>
+    <% if (Request.UserAgent.Contains("x64") && Request.UserAgent.Contains("MSIE"))
+        {%>
+    <object id="ZFComponent" width="0" height="0"
+        classid="CLSID:502A94C0-E6CB-4910-846D-6F4F261E98C0"
+        codebase="ActiveX/EIDA_ZF_ActiveX64.CAB">
+        <strong style="color: red">ActiveX is not supported by this browser, please use Internet Explorer</strong>
+    </object>
+    <%}
+    else { %>
+    <object id="ZFComponent" width="0" height="0"
+        classid="CLSID:502A94C0-E6CB-4910-846D-6F4F261E98C0"
+        codebase="ActiveX/EIDA_ZF_ActiveX.CAB">
+        <strong style="color: red">ActiveX is not supported by this browser, please use Internet Explorer</strong>
+    </object>
+    <%} %>
+
   
     <input type="hidden" id="ef_idn_cn" name="ef_idn_cn" value="" />
     <input type="hidden" id="ef_non_mod_data" name="ef_non_mod_data" value="" />
@@ -112,13 +59,6 @@ tr:nth-child(even) {
     <input type="hidden" id="signature" name="signature" value="" />
 
 
-    <%--<div id="left_column">
-                    <input type="button" class="submitButton" value="Read Public Data" onclick="doReadPublicData();" />
-                    <asp:Button ID="btnVerifyPubData" runat="server" Text="Verify and Parse"
-                        CssClass="submitButton" OnClick="btnVerifyPubData_Click" />
-                    
-    <asp:Button ID="Button1" PostBackUrl="http://zf-sp/orgchart/ProgramsDepartment/hajj/Lists/List21/AllItems.aspx" runat="server" Text="Next" Width="130px" />
-                </div>--%>
     <br/>
     <h3 class="auto-style2">Card Holder Information</h3>
     <div style="padding-left: 30px; font-size: 8pt">
@@ -454,16 +394,8 @@ tr:nth-child(even) {
             <td align="center" class="auto-style13"><asp:Label runat="server" ID="WorkAddress" CssClass="auto-style1"></asp:Label></td>
         </tr>
     </table>--%>
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Req_ID" ErrorMessage="Please insert Order number">Please insert Order number</asp:RequiredFieldValidator>
-    <br/>
-    <div id="left_column">
-        <input type="button" class="submitButton" value="Read Public Data" onclick="doReadPublicData();" />
-    <asp:Button ID="Button2" runat="server" Text="Verify and Parse"
-            CssClass="submitButton" OnClick="btnVerifyPubData_Click" />
-    <asp:Button ID="Button3" PostBackUrl="http://zf-sp/orgchart/ProgramsDepartment/hajj/Lists/List21/AllItems.aspx" runat="server" Text="Next" Width="130px" />
-    </div>
-    <br />
     
+             
 </asp:Content>
 
 <asp:Content ID="PageTitle" ContentPlaceHolderID="PlaceHolderPageTitle" runat="server">

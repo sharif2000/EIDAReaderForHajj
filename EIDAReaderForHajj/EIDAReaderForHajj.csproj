@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SandboxedSolution>False</SandboxedSolution>
+    <AssemblyDeploymentTarget>WebApplication</AssemblyDeploymentTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,12 +35,15 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PublicDataParser">
+      <HintPath>..\..\..\..\Desktop\dlls\PublicDataParser.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -51,6 +55,7 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Layouts\EIDAReaderForHajj\EIDData.cs" />
     <Compile Include="Layouts\EIDAReaderForHajj\NewHajjFormWithEIDAReader.aspx.cs">
       <DependentUpon>NewHajjFormWithEIDAReader.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -62,6 +67,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="key.snk" />
+    <None Include="Layouts\EIDAReaderForHajj\data_signing_certs\Data Signature-1-Prod.cer" />
+    <None Include="Layouts\EIDAReaderForHajj\data_signing_certs\Data Signature-2-Prod.cer" />
+    <None Include="Layouts\EIDAReaderForHajj\data_signing_certs\Data Signature-3-Prod.cer" />
+    <None Include="Layouts\EIDAReaderForHajj\data_signing_certs\Data Signature-4-Prod.cer" />
+    <None Include="Layouts\EIDAReaderForHajj\data_signing_certs\Test-TCA1.cer" />
+    <None Include="Layouts\EIDAReaderForHajj\data_signing_certs\Test-TCA2.cer" />
+    <None Include="Layouts\EIDAReaderForHajj\data_signing_certs\Test-TCA_V2.cer" />
+    <None Include="Layouts\EIDAReaderForHajj\data_signing_certs\Test-TCA_V2_1.cer" />
     <None Include="Layouts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{89efcfeb-840e-4cab-b782-4ab65c4b3363}</SharePointProjectItemId>
     </None>
@@ -74,8 +87,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\" />
+    <Folder Include="Layouts\EIDAReaderForHajj\lib\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Layouts\EIDAReaderForHajj\ActiveX\EIDA_ZF_ActiveX.CAB" />
+    <Content Include="Layouts\EIDAReaderForHajj\ActiveX\EIDA_ZF_ActiveX64.CAB" />
     <Content Include="Layouts\EIDAReaderForHajj\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Layouts\EIDAReaderForHajj\css\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Layouts\EIDAReaderForHajj\css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -92,6 +108,7 @@
     <Content Include="Layouts\EIDAReaderForHajj\css\jquery-ui-1.9.0.css" />
     <Content Include="Layouts\EIDAReaderForHajj\css\side_menu.css" />
     <Content Include="Layouts\EIDAReaderForHajj\css\style.css" />
+    <Content Include="Layouts\EIDAReaderForHajj\css\style2.css" />
     <Content Include="Layouts\EIDAReaderForHajj\css\top_menu.css" />
     <Content Include="Layouts\EIDAReaderForHajj\images\ajax-loader.gif" />
     <Content Include="Layouts\EIDAReaderForHajj\images\bg-sidebar-banner.gif" />
@@ -117,6 +134,7 @@
     <Content Include="Layouts\EIDAReaderForHajj\js\errors.js" />
     <Content Include="Layouts\EIDAReaderForHajj\js\jquery-1.8.2.js" />
     <Content Include="Layouts\EIDAReaderForHajj\js\jquery-ui-1.9.0.js" />
+    <Content Include="Layouts\EIDAReaderForHajj\js\Script1.js" />
     <Content Include="Layouts\EIDAReaderForHajj\js\zfcomponent.js" />
     <Content Include="Layouts\EIDAReaderForHajj\NewHajjFormWithEIDAReader.aspx" />
   </ItemGroup>

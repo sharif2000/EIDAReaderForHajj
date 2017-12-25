@@ -1,0 +1,86 @@
+﻿.auto-style1 {
+    font-size: xx-small;
+}
+
+.auto-style2 {
+    color: #990000;
+}
+
+.auto-style4 {
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px 4px;
+    color: #990000;
+}
+
+.auto-style11 {
+    text-align: right;
+    font-size: x-large;
+    float: left;
+}
+
+.image {
+    content: url(http://zf-sp/Style%20Library/Images/logo.png);
+}
+
+.auto-style12 {
+    color: #FFFFFF;
+    font-size: large;
+}
+
+.auto-style13 {
+    width: 64px;
+}
+
+.auto-style14 {
+    width: 135px;
+}
+
+.auto-style15 {
+    width: 133px;
+}
+
+.auto-style16 {
+    width: 176px;
+}
+
+.auto-style17 {
+    width: 92px;
+}
+
+.auto-style18 {
+    width: 176px;
+    height: 26px;
+}
+
+.auto-style19 {
+    width: 135px;
+    height: 26px;
+}
+
+.auto-style20 {
+    width: 92px;
+    height: 26px;
+}
+
+.auto-style21 {
+    width: 133px;
+    height: 26px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+

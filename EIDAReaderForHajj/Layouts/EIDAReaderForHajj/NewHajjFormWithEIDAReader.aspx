@@ -32,14 +32,14 @@
     </div>
     <% if (Request.UserAgent.Contains("x64") && Request.UserAgent.Contains("MSIE"))
         {%>
-    <object id="ZFComponent" width="0" height="0"
+    <object id="ZFComponent64" width="0" height="0"
         classid="CLSID:502A94C0-E6CB-4910-846D-6F4F261E98C0"
         codebase="ActiveX/EIDA_ZF_ActiveX64.CAB">
         <strong style="color: red">ActiveX is not supported by this browser, please use Internet Explorer</strong>
     </object>
     <%}
     else { %>
-    <object id="ZFComponent" width="0" height="0"
+    <object id="ZFComponent32" width="0" height="0"
         classid="CLSID:502A94C0-E6CB-4910-846D-6F4F261E98C0"
         codebase="ActiveX/EIDA_ZF_ActiveX.CAB">
         <strong style="color: red">ActiveX is not supported by this browser, please use Internet Explorer</strong>
